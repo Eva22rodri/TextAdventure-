@@ -6,12 +6,16 @@ namespace TextAdventure
     {
         static void Main(string[] args)
         {
-            System.Threading.Thread.Sleep(1500);
-            Console.WriteLine("You're on your way to a camping trip with some friends");
-            /*aliens are invading*/
+            Console.WriteLine("What is your name?");
+            string userName = Console.ReadLine();
+            Console.Clear();
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine(userName  + ", you're on your way to a camping trip with some friends");
+            string lightMonster = "Sternlicht";
+
             Console.WriteLine("The radio starts to fiz up and you hear...");
             Console.WriteLine(" ");
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 3; i++)
             {
                 System.Threading.Thread.Sleep(1500);
                 Console.ForegroundColor = ConsoleColor.Red;
@@ -23,6 +27,7 @@ namespace TextAdventure
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("...coming from the radio.");
             Console.ReadKey();
+            Console.Clear();
 
             Console.WriteLine(" ");
             System.Threading.Thread.Sleep(2000);
@@ -33,27 +38,28 @@ namespace TextAdventure
 
 
             string speakOrRunResponse;
-            //bool responded = true;
             Console.WriteLine("Their fate is in your hands!");
             Console.ForegroundColor = ConsoleColor.Yellow;
+
             Console.WriteLine("Will you try to SPEAK to the light or will you RUN?");
             speakOrRunResponse = Console.ReadLine();
-
-            Console.ForegroundColor = ConsoleColor.White;
-            while (speakOrRunResponse != "SPEAK" && speakOrRunResponse != "RUN")
-            {
-                //responded = false;
-                Console.WriteLine("Quick! You have to make a choice!");
-                break;
-            }
+            Console.ForegroundColor = ConsoleColor.White;          
             if (speakOrRunResponse == "SPEAK")
             {
-                Console.WriteLine(" Something Happens ");
+                Console.WriteLine(userName + ":" +  " What do you want, how can I set them free?");
+                Console.WriteLine(lightMonster + ":" +  " What do you want, how can I set them free?");
+                Console.WriteLine(" ");
             }
             else if (speakOrRunResponse == "Run")
             {
-                Console.WriteLine("something else happens");
+                Console.WriteLine("You try to open the door, ");
             }
+
+            
+            
         }   
     }
 }
+
+
+            
